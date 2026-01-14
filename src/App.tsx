@@ -36,7 +36,7 @@ const App: React.FC = () => {
 
   // Allow early exit with q or Ctrl+C
   useInput((input: string, key: any) => {
-    if (input === 'q' || key.escape || key.ctrl && input === 'c') {
+    if (input === 'q' || key.escape || (key.ctrl && input === 'c')) {
       exit();
     }
   });

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Text } from 'ink';
+import { ANIMATION_INTERVAL_MS } from '../constants.js';
 
 const PlasmaField: React.FC = () => {
   const [frame, setFrame] = useState(0);
@@ -14,7 +15,7 @@ const PlasmaField: React.FC = () => {
     // Animation loop
     const interval = setInterval(() => {
       setFrame((f) => f + 1);
-    }, 50);
+    }, ANIMATION_INTERVAL_MS);
 
     return () => clearInterval(interval);
   }, []);

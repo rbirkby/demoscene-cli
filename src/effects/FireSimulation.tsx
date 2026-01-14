@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Text } from 'ink';
+import { ANIMATION_INTERVAL_MS } from '../constants.js';
 
 const FireSimulation: React.FC = () => {
   const [frame, setFrame] = useState(0);
@@ -25,7 +26,7 @@ const FireSimulation: React.FC = () => {
     // Animation loop
     const interval = setInterval(() => {
       setFrame((f) => f + 1);
-    }, 50);
+    }, ANIMATION_INTERVAL_MS);
 
     return () => clearInterval(interval);
   }, []);
@@ -62,7 +63,8 @@ const FireSimulation: React.FC = () => {
     }
 
     setFireBuffer(newBuffer);
-  }, [frame, dimensions]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [frame, dimensions.width, dimensions.height]);
 
   const generateFire = (): string[] => {
     if (fireBuffer.length === 0) return [];
