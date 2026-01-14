@@ -25,6 +25,14 @@ npm install
 
 ## Usage
 
+### Quick Start with npx
+
+If the package is published to npm, you can run it directly without installation:
+
+```bash
+npx demoscene-cli
+```
+
 ### Development Mode
 
 Run the visualization in development mode:
@@ -64,6 +72,13 @@ npm install -g .
 demoscene-cli
 ```
 
+Or if published to npm:
+
+```bash
+npm install -g demoscene-cli
+demoscene-cli
+```
+
 ## Controls
 
 - Press `q` or `Esc` to exit early
@@ -76,6 +91,8 @@ demoscene-cli
 - **TypeScript** - Primary programming language
 - **React Ink** - Terminal UI framework for rendering
 - **Node.js** - Runtime environment
+
+**Note**: While the original specification called for BunJS, this implementation uses Node.js for broader compatibility. The code can be easily adapted to run with Bun if desired by changing the build scripts in `package.json`.
 
 ### Features
 

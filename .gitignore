@@ -4,6 +4,7 @@ bun.lockb
 
 # Build output
 dist/
+bundle/
 
 # Environment files
 .env
