@@ -1,0 +1,33 @@
+{
+  "name": "demoscene-cli",
+  "version": "1.0.0",
+  "description": "Terminal-based demoscene visualization tool",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "demoscene-cli": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.tsx",
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "demoscene",
+    "terminal",
+    "visualization",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ink": "^4.4.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
