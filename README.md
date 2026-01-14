@@ -1,3 +1,90 @@
 # demoscene-cli
 
-Terminal-based demoscene visualization tool.
+Terminal-based demoscene visualization tool showcasing three different animated effects.
+
+## Description
+
+This tool runs three sequential visualizations, each lasting exactly 10 seconds:
+
+1. **Multicoloured Sine Wave (0-10 seconds)** - Animated sine waves with vibrant colors flowing across the screen
+2. **Multicoloured Plasma Field (10-20 seconds)** - Classic plasma effect with organic, flowing patterns
+3. **Fire Simulation (20-30 seconds)** - Realistic fire/flame effect with warm colors rising from the bottom
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+## Usage
+
+### Development Mode
+
+Run the visualization in development mode:
+
+```bash
+npm run dev
+```
+
+### Build
+
+Compile the TypeScript source to JavaScript:
+
+```bash
+npm run build
+```
+
+### Run Built Version
+
+After building, run the compiled version:
+
+```bash
+npm start
+```
+
+Or run directly:
+
+```bash
+node dist/index.js
+```
+
+### Install Globally
+
+To make the tool available as a command anywhere on your system:
+
+```bash
+npm install -g .
+demoscene-cli
+```
+
+## Controls
+
+- Press `q` or `Esc` to exit early
+- The visualization will automatically exit after 30 seconds
+
+## Technical Details
+
+### Stack
+
+- **TypeScript** - Primary programming language
+- **React Ink** - Terminal UI framework for rendering
+- **Node.js** - Runtime environment
+
+### Features
+
+- Full terminal dimension support
+- Smooth 20 FPS animations
+- ANSI color support (256 colors)
+- Graceful exit handling
+- Responsive to terminal resize
+
+## License
+
+MIT
